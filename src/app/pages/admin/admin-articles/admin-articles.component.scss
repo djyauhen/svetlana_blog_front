@@ -1,0 +1,377 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/fonts";
+@import "../admin.component";
+
+.header .container {
+  padding-top: 100px;
+  padding-bottom: 93px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: $primary-dark-color;
+
+  .text-block {
+    font-family: "Nunito", sans-serif;
+    text-align: left;
+    margin: 0;
+
+    .title {
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 82px;
+      margin: 0;
+      text-transform: uppercase;
+    }
+
+    .link {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 31px;
+      margin: 0;
+      text-decoration: underline;
+      color: $primary-dark-color;
+    }
+  }
+
+  .button-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+    .button {
+      max-width: 413px;
+      height: 74px;
+      padding: 21px;
+      gap: 9px;
+      border-radius: 12px;
+      background-color: #94A1BA;
+      font-family: "Nunito", sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 31px;
+
+
+      &:hover {
+        cursor: pointer;
+        background-color: #D2D9E6;
+      }
+    }
+  }
+}
+
+.articles {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 33px;
+    padding-bottom: 58px;
+    height: 498px;
+
+    .article-item {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      width: 100%;
+
+      .article-info {
+        max-width: 879px;
+        width: 100%;
+        gap: 65px;
+        display: flex;
+        align-items: center;
+        margin: 0;
+
+        .article-date, .article-title {
+          margin: 0;
+
+          font-family: "Nunito", sans-serif;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 31px;
+        }
+
+        .article-title {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .article-actions {
+        display: flex;
+        gap: 33px;
+        margin-right: 0;
+
+        .article-button {
+          width: 190px;
+          height: 56px;
+          padding: 15px 10px;
+          gap: 10px;
+          border-radius: 10px;
+          font-family: "Nunito", sans-serif;
+          font-size: 20px;
+          font-weight: 300;
+          line-height: 26px;
+          background-color: #D2D9E6;
+
+          &:hover {
+            cursor: pointer;
+            background-color: #ABB5C9;
+          }
+        }
+
+        .button-icon, .button-text {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.pagination .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+
+  .arrow {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+    &:hover {
+      cursor: pointer;
+
+      svg path {
+        stroke: #706A8A;
+      }
+    }
+
+    &.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.delete-dialog {
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.85);
+  }
+
+  &:focus-visible {
+    outline: 0;
+  }
+
+  margin: auto;
+  max-width: 715px;
+  width: 100%;
+  max-height: 499px;
+  height: 100%;
+  border-radius: 31px;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  .container {
+    border: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+
+    &:focus-visible {
+      outline: 0;
+    }
+
+    .close-menu {
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      top: 35px;
+      right: 35px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .title {
+      font-family: Source Sans Pro, sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 31px;
+      text-align: center;
+    }
+
+    .dialog-actions {
+      display: flex;
+      gap: 15px;
+      margin-top: 24px;
+
+      .button {
+        width: 161px;
+        height: 55px;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        background-color: #D2D9E6;
+        cursor: pointer;
+
+        //styleName: P2-24;
+        font-family: Source Sans Pro, sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 31px;
+
+
+        &:hover {
+          background-color: #ABB5C9;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .header .container .text-block .title {
+    font-size: 50px;
+    line-height: 52px;
+  }
+
+  .articles .container .article-item {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 15px;
+
+    .article-info {
+      justify-content: space-between;
+    }
+
+    .article-actions {
+      margin: 0;
+      justify-content: space-between;
+
+      .article-button {
+        width: 100%;
+      }
+
+      .button-icon, .button-text {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 751px) {
+  .header .container {
+    .text-block {
+
+      .title {
+        font-size: 37px;
+        line-height: 130%;
+      }
+
+      .link {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 103%;
+      }
+    }
+
+    .button-block {
+      gap: 10px;
+      flex-direction: column;
+
+      .button {
+        padding: 15px 30px;
+        height: 50px;
+
+        .button-text {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .articles {
+    .container {
+      gap: 25px;
+      height: auto;
+
+      .article-item {
+
+        .article-info {
+          gap: 10px;
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .article-actions {
+          gap: 15px;
+          flex-direction: column;
+
+          .article-button {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .header .container {
+    .text-block .title {
+      font-size: 28px;
+    }
+  }
+
+  .articles {
+    .container {
+      gap: 25px;
+      height: auto;
+
+      .article-item {
+
+        .article-info {
+          gap: 10px;
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .article-actions {
+          gap: 15px;
+          flex-direction: column;
+
+          .article-button {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+

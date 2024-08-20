@@ -1,0 +1,65 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/fonts";
+@import "../../../../styles/mixins";
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(#E1D6CD, 0.85);
+  z-index: 5;
+
+  .container {
+    padding: 24px 104px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .menu {
+      display: flex;
+      align-items: center;
+      margin: 0;
+
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        list-style: none;
+        margin: 0;
+
+        li {
+          margin: 0;
+
+          a {
+            @include menuItems;
+            color: $primary-dark-color;
+            text-decoration: none;
+
+            &:hover {
+              color: #FBF9F5;
+            }
+          }
+        }
+      }
+    }
+
+    .address {
+      display: flex;
+      gap: 11px;
+      flex-direction: column;
+      margin: 0;
+
+      a {
+        @include menuItems;
+        color: $primary-dark-color;
+        text-decoration: none;
+        margin: 0;
+
+        &:hover {
+          color: #FBF9F5;
+        }
+      }
+    }
+  }
+}

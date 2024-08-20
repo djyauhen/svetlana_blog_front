@@ -1,0 +1,63 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/fonts";
+@import "../../../../styles/mixins";
+
+.article-item {
+  width: 392px;
+  height: 540px;
+  background: #D3CDC3;
+  position: relative;
+  margin: 0;
+
+  .article-item-image {
+    width: 100%;
+    height: 265px;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .article-item-info {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .article-item-date {
+      @include p1-22;
+      color: $primary-dark-color;
+      margin: 0;
+    }
+
+    .article-item-text {
+      max-height: 101px;
+      height: 100%;
+      margin: 0;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 20px;
+      line-height: 130%;
+    }
+
+    .button {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: $secondary-dark-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: 18px;
+      right: 18px;
+
+      &:hover {
+        background: #5B2D2B;
+        cursor: pointer;
+      }
+    }
+  }
+}

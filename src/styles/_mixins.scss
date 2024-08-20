@@ -1,0 +1,58 @@
+@import "variables";
+@import "fonts";
+
+
+@mixin menuItems {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+@mixin p1-22 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 140%;
+  font-size: 22px;
+}
+
+@mixin p2-24 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 130%;
+  font-size: 24px;
+}
+
+@mixin h3-31 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 130%;
+  font-size: 31px;
+}
+
+@mixin h2-45 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 130%;
+  font-size: 45px;
+}
+
+@mixin h2-41 {
+  font-family: "Oranienbaum", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 130%;
+  font-size: 41px;
+}
+
+@mixin h1-60 {
+  font-family: "Oranienbaum", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 130%;
+  font-size: 60px;
+}

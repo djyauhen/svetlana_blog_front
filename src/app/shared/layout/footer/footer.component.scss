@@ -1,0 +1,112 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/fonts";
+@import "../../../../styles/mixins";
+
+footer {
+  width: 100%;
+  background-color: rgba(#E1D6CD, 1);
+
+  .container {
+    padding: 24px 104px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .menu {
+      display: flex;
+      align-items: center;
+      margin: 0;
+
+      ul {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        list-style: none;
+        margin: 0;
+
+        li {
+          margin: 0;
+
+          a {
+            @include menuItems;
+            color: $primary-dark-color;
+            text-decoration: none;
+
+            &:hover {
+              color: #FBF9F5;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    .address {
+      display: flex;
+      gap: 11px;
+      flex-direction: column;
+      margin: 0;
+
+      a {
+        @include menuItems;
+        color: $primary-dark-color;
+        text-decoration: none;
+        margin: 0;
+
+        &:hover {
+          color: #FBF9F5;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+
+dialog {
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.65);
+  }
+
+  &:focus-visible {
+    outline: 0;
+  }
+  max-width: 1272px;
+  width: 100%;
+  height: 817px;
+  max-height: 100%;
+  box-sizing: border-box;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background: #FDFAF8;
+  border: 0;
+  border-radius: 60px;
+  position: fixed;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .close-form {
+      position: absolute;
+      top: 50px;
+      right: 50px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .dialog-text {
+      @include p1-22;
+      color: $primary-medium-color;
+      margin-bottom: 35px;
+      max-width: 692px;
+      text-align: center;
+    }
+  }
+}

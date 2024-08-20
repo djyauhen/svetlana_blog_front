@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import "styles/fonts";
+@import "styles/variables";
+
+html, body { height: 100%; }
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 0;
+}
+
+.mat-mdc-progress-spinner .mdc-circular-progress__indeterminate-container .mdc-circular-progress__spinner-layer .mdc-circular-progress__circle-clipper .mdc-circular-progress__indeterminate-circle-graphic circle,
+.mat-mdc-progress-spinner .mdc-circular-progress__indeterminate-container .mdc-circular-progress__spinner-layer .mdc-circular-progress__gap-patch .mdc-circular-progress__indeterminate-circle-graphic circle {
+  stroke: rgba(#E1D6CD, 0.85);
+}

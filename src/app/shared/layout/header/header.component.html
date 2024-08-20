@@ -1,0 +1,28 @@
+<header class="header">
+  <article class="container">
+    <nav class="menu">
+      <ul>
+        <li>
+          <a [routerLink]="['']" [fragment]="'main'">Главная</a>
+        </li>
+        <li>
+          <a [routerLink]="['']" [fragment]="'about-me'">Обо мне</a>
+        </li>
+        <li>
+          <a [routerLink]="['']" [fragment]="'services'">Услуги</a>
+        </li>
+        <li *ngIf="!hiddenBlogLink">
+          <a [routerLink]="['blog']">Блог</a>
+        </li>
+        <li>
+          <a [routerLink]="['']" [fragment]="'contacts'">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+
+    <address class="address">
+      <a href="tel:+79781866808">+7 (978) 186 68 08</a>
+      <a href="mailto:advocate.degtyareva@gmail.com">advocate.degtyareva&#64;gmail.com</a>
+    </address>
+  </article>
+</header>

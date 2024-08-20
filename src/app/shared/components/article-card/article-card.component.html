@@ -1,0 +1,16 @@
+<article class="article-item">
+  <figure class="article-item-image" style="background-image: url('{{article.image}}')">
+  </figure>
+  <section class="article-item-info">
+    <time class="article-item-date">{{article.date}}</time>
+    <p class="article-item-text" [innerHTML]="article.title"></p>
+    <figure class="button" (click)="openArticle(article._id)">
+      <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.28211 7.15299L23.8974 23.237" stroke="#E6DED2" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"/>
+        <path d="M7.52334 20.3131L7.28129 7.15324L20.4434 6.96677" stroke="#E6DED2" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </figure>
+  </section>
+</article>

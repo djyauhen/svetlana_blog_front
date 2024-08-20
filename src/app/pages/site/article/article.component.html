@@ -1,0 +1,37 @@
+<section class="article" *ngIf="article">
+  <article class="container">
+    <a class="article-back-link" (click)="clickBack()">
+      <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.5 19.5L8.5 12.5L15.5 5.5" stroke="#20100F" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"/>
+      </svg>
+      <span>Вернуться назад</span>
+    </a>
+
+    <section class="article-block">
+      <article class="article-text-block">
+        <section class="article-text-info">
+          <h2 class="article-text-title title h2">{{article.title}}</h2>
+          <article class="article-text-pretext" [innerHTML]="article.text"></article>
+          <article class="article-text-duration">
+            <figure class="duration-image">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M21.25 12C21.25 17.108 17.109 21.25 12 21.25C6.892 21.25 2.75 17.108 2.75 12C2.75 6.891 6.892 2.75 12 2.75C17.109 2.75 21.25 6.891 21.25 12Z"
+                      stroke="#2B1211" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.1902 12.7672L11.6602 12.6932V7.84619" stroke="#2B1211" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </figure>
+            <span class="duration-text">Время прочтения: {{article.duration}} {{durationText}}</span>
+          </article>
+        </section>
+
+        <section class="article-text" [innerHTML]="article.text"></section>
+      </article>
+      <article class="article-image-block" *ngIf="article.image && (article.image !== '')">
+        <figure class="article-image-item" style="background-image: url('{{article.image}}')"></figure>
+      </article>
+    </section>
+  </article>
+</section>

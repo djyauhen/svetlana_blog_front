@@ -1,0 +1,46 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/fonts";
+@import "../../../../styles/mixins";
+
+.politic .container {
+  padding: 165px 110px 65px;
+
+  .politic-back-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    margin-bottom: 80px;
+
+    @include p1-22;
+    color: $primary-dark-color;
+
+    svg, span {
+      margin: 0;
+    }
+  }
+
+  .politic-block {
+    .politic-text-title {
+      @include h3-31;
+      color: $primary-dark-color;
+      margin-bottom: 70px;
+      text-align: center;
+    }
+
+    .politic-text-pretext {
+      display: flex;
+      align-items: flex-start;
+      gap: 33px;
+      flex-direction: column;
+      margin: 0;
+
+      @include p1-22;
+      color: $secondary-dark-color;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

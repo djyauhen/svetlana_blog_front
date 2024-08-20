@@ -1,0 +1,43 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/fonts";
+@import "../../../../styles/mixins";
+
+.actual-articles {
+  .container {
+    padding: 260px 271px;
+
+    .actual-articles-title {
+      @include h2-41;
+      color: $primary-dark-color;
+      margin-bottom: 65px;
+      text-transform: uppercase;
+    }
+
+    .articles-items {
+      max-width: 1275px;
+      padding: 0 43px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 92px 48px;
+    }
+
+    .article-back-link {
+      margin-top: 42px;
+      margin-right: 43px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 15px;
+      cursor: pointer;
+
+      @include p1-22;
+      color: $primary-dark-color;
+
+      svg, span {
+        margin: 0;
+      }
+    }
+  }
+}

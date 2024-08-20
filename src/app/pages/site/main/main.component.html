@@ -1,0 +1,407 @@
+<section class="first-screen" id="main">
+  <article class="container">
+    <h1 class="main-title title h1">Юрист по семейным и имущественным спорам в Республике Крым</h1>
+    <p class="main-text text h3">Сосредоточьте всю свою энергию не на борьбе со старым, а на построении нового</p>
+    <button class="button" (click)="openDialog('dialog-form')">Записаться на консультацию</button>
+    <section class="service-items">
+      <article class="service-item" *ngFor="let serviceItem of services;" [routerLink]="['']" [fragment]="'services'">
+        <figure class="rectangle"></figure>
+        <figure class="circle">
+          <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M4.46967 8.06708C4.73594 7.79756 5.1526 7.77306 5.44621 7.99358L5.53033 8.06708L12 14.6155L18.4697 8.06708C18.7359 7.79756 19.1526 7.77306 19.4462 7.99358L19.5303 8.06708C19.7966 8.33661 19.8208 8.75837 19.6029 9.05557L19.5303 9.14072L12.5303 16.2263C12.2641 16.4959 11.8474 16.5204 11.5538 16.2998L11.4697 16.2263L4.46967 9.14072C4.17678 8.84424 4.17678 8.36356 4.46967 8.06708Z"
+              fill="#20100F"/>
+          </svg>
+        </figure>
+        <p class="menu-text" [innerHTML]="serviceItem.subtitle"></p>
+      </article>
+    </section>
+  </article>
+</section>
+
+<section class="acquaintance">
+  <article class="container">
+    <h2 class="h2 title acquaintance-title">Расторжение брака, раздел имущества, взыскание алиментов, восстановление и
+      лишение родительских прав, оспаривание отцовства</h2>
+    <p class="acquaintance-text p-24">Несомненно, очень деликатные категории дел <span class="line"></span></p>
+    <p class="acquaintance-text p-22">И, если после прекращения семейных отношений каждый человек имеет все шансы
+      пережить
+      утрату и продолжить жить дальше, то ошибки, допущенные при разрешении семейных и имущественных споров, нередко
+      становятся камнем преткновения на пути и приводят к непоправимым последствиям.</p>
+    <p class="acquaintance-text p-22">Мои клиенты сохраняют лицо, здоровую нервную систему, время и финансы, доверяя мне
+      построение эффективной стратегии защиты своих прав <br>
+      и интересов.</p>
+  </article>
+</section>
+
+<section class="about-me" id="about-me">
+  <article class="container">
+    <section class="about-me-title-photo">
+      <h2 class="about-me-title title h2">Обо мне</h2>
+      <figure class="about-me-image-container">
+        <img class="about-me-image-item" src="./assets/images/portrait.webp" alt="My photo">
+      </figure>
+    </section>
+    <section class="about-me-text-items">
+      <p class="about-me-text-item first">Меня зовут Дегтярева Светлана, я — квалифицированный практикующий юрист,
+        которому
+        доверяют. Для меня всегда был важен эмоциональный отклик <br>
+        в профессии и польза, которую я могу принести.</p>
+      <p class="about-me-text-item second">Принимая участие в урегулировании семейных и имущественных конфликтов,
+        которые на
+        сегодня составляют значительную часть моей юридической практики, я реализую важную миссию — помогаю людям, делая
+        их жизнь проще, спокойнее и счастливее.</p>
+      <p class="about-me-text-item third">Убеждена, что в семейных делах и имущественном планировании важно быть<br> не
+        только
+        профессионалом и опираться на букву закона, но и человеком, обладающим духовно-нравственными ценностями, владеть
+        базовыми знаниями психологии и медиации.</p>
+    </section>
+  </article>
+</section>
+
+<section class="principles">
+  <article class="container">
+    <h2 class="title h2 principles-title">Мои ценности и принципы</h2>
+    <section class="principles-items">
+      <article class="principles-item first-item"></article>
+      <article class="principles-item" *ngFor="let principle of principlesItems; let i = index">
+        <p class="principle-item-count">0{{i + 1}} <span class="line"></span></p>
+        <h3 class="principles-item-title">{{principle.title}}</h3>
+        <p class="principle-item-description">{{principle.description}}</p>
+      </article>
+    </section>
+  </article>
+</section>
+
+<section class="services" id="services">
+  <article class="container">
+    <h2 class="services-title title h2">спектр моих услуг</h2>
+    <section class="services-items">
+      <article class="services-part">
+        <section class="services-item" *ngFor="let service of services.slice(0, 3)">
+          <article class="front-side active">
+            <h3 class="services-item-title">{{service.title}}</h3>
+            <figure class="services-item-button">
+              <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.28211 7.15299L23.8974 23.237" stroke="#E6DED2" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round"/>
+                <path d="M7.52334 20.3131L7.28129 7.15324L20.4434 6.96677" stroke="#E6DED2" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </figure>
+          </article>
+          <article class="back-side">
+            <p class="services-item-title">{{service.title}} <span class="line"></span></p>
+            <section class="services-item-points">
+              <p class="services-item-point" *ngFor="let point of service.points">{{point}}</p>
+            </section>
+            <figure class="services-item-button">
+              <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24.247 22.469L6.59288 7.08484" stroke="#E6DED2" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round"/>
+                <path d="M23.3049 9.17393L24.2471 22.4688L10.9473 23.3549" stroke="#E6DED2" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </figure>
+          </article>
+        </section>
+      </article>
+      <article class="services-action">
+        <h3 class="services-action-title">ЗАПИСАТЬСЯ НА КОНСУЛЬТАЦИЮ</h3>
+        <p class="services-action-text">Стоимость каждой услуги рассчитывается индивидуально</p>
+        <button class="button"  (click)="openDialog('dialog-form')">Записаться</button>
+      </article>
+      <article class="services-part">
+        <section class="services-item"
+                 *ngFor="let service of services.slice(Math.max(services.length - 3, 0))">
+          <article class="front-side active">
+            <h3 class="services-item-title">{{service.title}}</h3>
+            <figure class="services-item-button">
+              <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.28211 7.15299L23.8974 23.237" stroke="#E6DED2" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round"/>
+                <path d="M7.52334 20.3131L7.28129 7.15324L20.4434 6.96677" stroke="#E6DED2" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </figure>
+          </article>
+          <article class="back-side">
+            <p class="services-item-title">{{service.title}} <span class="line"></span></p>
+            <section class="services-item-points">
+              <p class="services-item-point" *ngFor="let point of service.points">{{point}}</p>
+            </section>
+            <figure class="services-item-button">
+              <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24.247 22.469L6.59288 7.08484" stroke="#E6DED2" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round"/>
+                <path d="M23.3049 9.17393L24.2471 22.4688L10.9473 23.3549" stroke="#E6DED2" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </figure>
+          </article>
+        </section>
+      </article>
+    </section>
+  </article>
+</section>
+
+<section class="quote">
+  <article class="container">
+    <blockquote>
+      <figure class="figure">
+        “
+      </figure>
+      <p class="quote-text">Семья ведь тоже созидается, а не дается готовою, и никаких прав и никаких обязанностей не
+        дается тут готовыми, а все они сами собою, одно из другого вытекают. Только тогда это крепко, только тогда это и
+        свято. Созидается же семья неустанным трудом любви.</p>
+      <p class="quote-author"><span class="line"></span>Фёдор Достоевский</p>
+    </blockquote>
+  </article>
+</section>
+
+<section class="actual-articles" *ngIf="articles && (articles.length > 0)">
+  <article class="container">
+    <h2 class="title actual-articles-title">актуальные статьи</h2>
+    <section class="articles-items">
+      <article-card class="article-item" *ngFor="let article of articles.slice(0,3)" [article]="article"></article-card>
+    </section>
+    <a class="link" [routerLink]="['blog']">
+      <span class="arrow">
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 1.5L8 8.5L1 1.5" stroke="#2B1211" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round"/>
+        </svg>
+      </span>
+      Все статьи
+    </a>
+  </article>
+</section>
+
+<section class="processes">
+  <article class="container">
+    <h2 class="process-title">Процесс оказания юридической помощи</h2>
+    <section class="process-line">
+      <span class="line"></span>
+      <figure class="circle">
+        <span class="number">01</span>
+      </figure>
+      <figure class="circle">
+        <span class="number">02</span>
+      </figure>
+      <figure class="circle">
+        <span class="number">03</span>
+      </figure>
+    </section>
+
+    <section class="process-items">
+      <article class="process-item">
+        <h3 class="process-item-title">Правовой анализ позиции клиента
+          и подготовка юридического заключения</h3>
+        <ul class="process-item-ul">
+          <li class="process-item-li">Изложение клиентом обстоятельств дела и предоставление (при наличии) имеющихся
+            доказательств
+          </li>
+          <li class="process-item-li">Выявление подлинного запроса клиента</li>
+          <li class="process-item-li">Правовой аудит представленных фактов и документов, исследование законодательства и
+            анализ
+            правоприменительной практики
+          </li>
+          <li class="process-item-li">Юридическое заключение со всесторонней оценкой перспектив разрешения спора
+            и актуальных вариантов его урегулирования
+          </li>
+        </ul>
+      </article>
+      <article class="process-item">
+        <h3 class="process-item-title">Обсуждение условий дальнейшего сотрудничества и подписание договора. Разработка
+          стратегии по делу</h3>
+        <ul class="process-item-ul">
+          <li class="process-item-li">Стоимость соглашения формируется исходя из формата и объема работы, необходимых
+            для достижения поставленных задач
+          </li>
+        </ul>
+      </article>
+      <article class="process-item">
+        <h3 class="process-item-title">Юридическое сопровождение дела <br> «под ключ» с акцентом на результат</h3>
+      </article>
+    </section>
+  </article>
+</section>
+
+<section class="form" id="contacts">
+  <article class="container">
+    <section class="form-container">
+      <h2 class="title form-title">Записать вас <br>
+        на консультацию?</h2>
+      <p class="form-text">Заполните форму, и мы свяжемся с вами</p>
+      <form class="form-items" [formGroup]="form">
+        <article class="form-item">
+          <figure class="form-item-icon">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M11.8445 22.1618C8.15273 22.1618 5 21.5873 5 19.2865C5 16.9858 8.13273 14.8618 11.8445 14.8618C15.5364 14.8618 18.6891 16.9652 18.6891 19.266C18.6891 21.5658 15.5564 22.1618 11.8445 22.1618Z"
+                    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M11.8365 11.6735C14.2592 11.6735 16.2229 9.7099 16.2229 7.28718C16.2229 4.86445 14.2592 2.8999 11.8365 2.8999C9.41379 2.8999 7.44924 4.86445 7.44924 7.28718C7.44106 9.70172 9.39106 11.6654 11.8056 11.6735C11.8165 11.6735 11.8265 11.6735 11.8365 11.6735Z"
+                    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </figure>
+          <input id="name" type="text" class="form-item-input" formControlName="name" required>
+          <label for="name" class="form-item-label">Введите имя</label>
+        </article>
+        <article class="form-item">
+          <figure class="form-item-icon">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8.20049 16.299C1.3025 9.40022 2.28338 6.24115 3.01055 5.22316C3.10396 5.05862 5.40647 1.61188 7.87459 3.63407C14.0008 8.67945 6.2451 7.96611 11.3894 13.1113C16.5348 18.2554 15.8214 10.5 20.8659 16.6249C22.8882 19.094 19.4413 21.3964 19.2778 21.4888C18.2598 22.217 15.0995 23.1978 8.20049 16.299Z"
+                    stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </figure>
+          <input id="phone" type="text" class="form-item-input" formControlName="phone" placeholder="+7 (---) --- -- --" prefix="+ 7 " mask="(000) 000-00-00" required>
+          <label for="phone" class="form-item-label">Введите номер телефона</label>
+        </article>
+        <article class="form-item">
+          <figure class="form-item-icon">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13.748 20.9428H21.0006" stroke="#130F26" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round"/>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12.78 4.29479C13.5557 3.36779 14.95 3.23186 15.8962 3.99173C15.9485 4.03296 17.6295 5.33879 17.6295 5.33879C18.669 5.96719 18.992 7.30311 18.3494 8.32259C18.3153 8.37718 8.81195 20.2645 8.81195 20.2645C8.49578 20.6589 8.01583 20.8918 7.50291 20.8973L3.86353 20.943L3.04353 17.4723C2.92866 16.9843 3.04353 16.4718 3.3597 16.0773L12.78 4.29479Z"
+                    stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11.0215 6.50098L16.4737 10.6881" stroke="#130F26" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round"/>
+            </svg>
+          </figure>
+          <input id="question" type="text" class="form-item-input" formControlName="question" required>
+          <label for="question" class="form-item-label">Напишите ваш вопрос</label>
+        </article>
+        <button class="button form-button" (click)="sendOrder()">Записаться</button>
+      </form>
+    </section>
+
+    <section class="contacts-container">
+      <h2 class="title contacts-title">Контакты</h2>
+
+      <article class="contacts-items">
+        <a href="tel:+79781866808" class="contacts-item">
+          <figure class="icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.1367 3.33301C24.0714 3.88101 27.9701 7.77434 28.5234 12.709" stroke="#20100F"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M19.1367 8.05664C21.4981 8.51531 23.3434 10.362 23.8034 12.7233" stroke="#20100F"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M14.708 16.6295C20.0267 21.9468 21.2333 15.7953 24.6197 19.1794C27.8844 22.4433 29.7623 23.0973 25.6244 27.2326C25.1063 27.649 21.8144 32.6587 10.2453 21.0926C-1.32519 9.52501 3.68144 6.2296 4.09794 5.71161C8.24437 1.5648 8.88845 3.45218 12.1532 6.71611C15.5382 10.1017 9.3894 11.3122 14.708 16.6295Z"
+                    stroke="#20100F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </figure>
+          +7 (978) 186 68 08
+        </a>
+        <a href="mailto:advocate.degtyareva@gmail.com" class="contacts-item">
+          <figure class="icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23.8705 11.8018L17.9461 16.6191C16.8267 17.5071 15.2519 17.5071 14.1326 16.6191L8.1582 11.8018"
+                    stroke="#20100F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M22.5445 27.9999C26.5996 28.0112 29.3327 24.6794 29.3327 20.5845V11.4267C29.3327 7.33177 26.5996 4 22.5445 4H9.4542C5.39906 4 2.66602 7.33177 2.66602 11.4267V20.5845C2.66602 24.6794 5.39906 28.0112 9.4542 27.9999H22.5445Z"
+                    stroke="#20100F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </figure>
+          advocate.degtyareva&#64;gmail.com
+        </a>
+        <a href="https://www.instagram.com/degtyareva_ru/" class="contacts-item">
+          <figure class="icon">
+            <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="0.75" y="1.25" width="24.5" height="24.5" rx="4.125" stroke="#2B1211" stroke-width="1.5"/>
+              <circle cx="13.0007" cy="13.5007" r="4.66667" stroke="#2B1211" stroke-width="1.5"/>
+              <circle cx="18.959" cy="6.45898" r="1.625" fill="#2B1211"/>
+            </svg>
+          </figure>
+          degtyareva_ru
+        </a>
+      </article>
+    </section>
+  </article>
+</section>
+
+<dialog id="dialog-form">
+  <article class="container" *ngIf="!thanksDialog && !errorDialog">
+    <figure class="close-form" (click)="closeDialog()">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.8806 15.9998L26.2806 7.61309C26.5316 7.36202 26.6727 7.02149 26.6727 6.66643C26.6727 6.31136 26.5316 5.97083 26.2806 5.71976C26.0295 5.46869 25.689 5.32764 25.3339 5.32764C24.9788 5.32764 24.6383 5.46869 24.3872 5.71976L16.0006 14.1198L7.6139 5.71976C7.36283 5.46869 7.02231 5.32764 6.66724 5.32764C6.31217 5.32764 5.97164 5.46869 5.72057 5.71976C5.4695 5.97083 5.32845 6.31136 5.32845 6.66643C5.32845 7.02149 5.4695 7.36202 5.72057 7.61309L14.1206 15.9998L5.72057 24.3864C5.5956 24.5104 5.49641 24.6578 5.42871 24.8203C5.36102 24.9828 5.32617 25.1571 5.32617 25.3331C5.32617 25.5091 5.36102 25.6834 5.42871 25.8459C5.49641 26.0083 5.5956 26.1558 5.72057 26.2798C5.84452 26.4047 5.99199 26.5039 6.15447 26.5716C6.31695 26.6393 6.49122 26.6742 6.66724 26.6742C6.84325 26.6742 7.01753 26.6393 7.18001 26.5716C7.34248 26.5039 7.48995 26.4047 7.6139 26.2798L16.0006 17.8798L24.3872 26.2798C24.5112 26.4047 24.6587 26.5039 24.8211 26.5716C24.9836 26.6393 25.1579 26.6742 25.3339 26.6742C25.5099 26.6742 25.6842 26.6393 25.8467 26.5716C26.0092 26.5039 26.1566 26.4047 26.2806 26.2798C26.4055 26.1558 26.5047 26.0083 26.5724 25.8459C26.6401 25.6834 26.675 25.5091 26.675 25.3331C26.675 25.1571 26.6401 24.9828 26.5724 24.8203C26.5047 24.6578 26.4055 24.5104 26.2806 24.3864L17.8806 15.9998Z" fill="#2B1211"/>
+      </svg>
+    </figure>
+
+    <h2 class="title dialog-title">Заполните форму</h2>
+    <p class="dialog-text">и мы свяжемся с вами</p>
+
+    <form class="form-items" [formGroup]="form">
+      <article class="form-item">
+        <figure class="form-item-icon">
+          <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.8445 22.1618C8.15273 22.1618 5 21.5873 5 19.2865C5 16.9858 8.13273 14.8618 11.8445 14.8618C15.5364 14.8618 18.6891 16.9652 18.6891 19.266C18.6891 21.5658 15.5564 22.1618 11.8445 22.1618Z"
+                  stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.8365 11.6735C14.2592 11.6735 16.2229 9.7099 16.2229 7.28718C16.2229 4.86445 14.2592 2.8999 11.8365 2.8999C9.41379 2.8999 7.44924 4.86445 7.44924 7.28718C7.44106 9.70172 9.39106 11.6654 11.8056 11.6735C11.8165 11.6735 11.8265 11.6735 11.8365 11.6735Z"
+                  stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </figure>
+        <input id="dialog-name" type="text" class="form-item-input" formControlName="name" required>
+        <label for="dialog-name" class="form-item-label">Введите имя</label>
+      </article>
+      <article class="form-item">
+        <figure class="form-item-icon">
+          <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8.20049 16.299C1.3025 9.40022 2.28338 6.24115 3.01055 5.22316C3.10396 5.05862 5.40647 1.61188 7.87459 3.63407C14.0008 8.67945 6.2451 7.96611 11.3894 13.1113C16.5348 18.2554 15.8214 10.5 20.8659 16.6249C22.8882 19.094 19.4413 21.3964 19.2778 21.4888C18.2598 22.217 15.0995 23.1978 8.20049 16.299Z"
+                  stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </figure>
+        <input id="dialog-phone" type="text" class="form-item-input" formControlName="phone" placeholder="+7 (---) --- -- --" prefix="+ 7 " mask="(000) 000-00-00" required>
+        <label for="dialog-phone" class="form-item-label">Введите номер телефона</label>
+      </article>
+      <article class="form-item">
+        <figure class="form-item-icon">
+          <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.748 20.9428H21.0006" stroke="#130F26" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"/>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12.78 4.29479C13.5557 3.36779 14.95 3.23186 15.8962 3.99173C15.9485 4.03296 17.6295 5.33879 17.6295 5.33879C18.669 5.96719 18.992 7.30311 18.3494 8.32259C18.3153 8.37718 8.81195 20.2645 8.81195 20.2645C8.49578 20.6589 8.01583 20.8918 7.50291 20.8973L3.86353 20.943L3.04353 17.4723C2.92866 16.9843 3.04353 16.4718 3.3597 16.0773L12.78 4.29479Z"
+                  stroke="#130F26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M11.0215 6.50098L16.4737 10.6881" stroke="#130F26" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"/>
+          </svg>
+        </figure>
+        <input id="dialog-question" type="text" class="form-item-input" formControlName="question" required>
+        <label for="dialog-question" class="form-item-label">Напишите ваш вопрос</label>
+      </article>
+      <button class="button form-button" (click)="sendOrder()">Записаться на консультацию</button>
+    </form>
+  </article>
+
+
+  <article class="container" *ngIf="thanksDialog">
+    <figure class="close-form" (click)="closeDialog()">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.8806 15.9998L26.2806 7.61309C26.5316 7.36202 26.6727 7.02149 26.6727 6.66643C26.6727 6.31136 26.5316 5.97083 26.2806 5.71976C26.0295 5.46869 25.689 5.32764 25.3339 5.32764C24.9788 5.32764 24.6383 5.46869 24.3872 5.71976L16.0006 14.1198L7.6139 5.71976C7.36283 5.46869 7.02231 5.32764 6.66724 5.32764C6.31217 5.32764 5.97164 5.46869 5.72057 5.71976C5.4695 5.97083 5.32845 6.31136 5.32845 6.66643C5.32845 7.02149 5.4695 7.36202 5.72057 7.61309L14.1206 15.9998L5.72057 24.3864C5.5956 24.5104 5.49641 24.6578 5.42871 24.8203C5.36102 24.9828 5.32617 25.1571 5.32617 25.3331C5.32617 25.5091 5.36102 25.6834 5.42871 25.8459C5.49641 26.0083 5.5956 26.1558 5.72057 26.2798C5.84452 26.4047 5.99199 26.5039 6.15447 26.5716C6.31695 26.6393 6.49122 26.6742 6.66724 26.6742C6.84325 26.6742 7.01753 26.6393 7.18001 26.5716C7.34248 26.5039 7.48995 26.4047 7.6139 26.2798L16.0006 17.8798L24.3872 26.2798C24.5112 26.4047 24.6587 26.5039 24.8211 26.5716C24.9836 26.6393 25.1579 26.6742 25.3339 26.6742C25.5099 26.6742 25.6842 26.6393 25.8467 26.5716C26.0092 26.5039 26.1566 26.4047 26.2806 26.2798C26.4055 26.1558 26.5047 26.0083 26.5724 25.8459C26.6401 25.6834 26.675 25.5091 26.675 25.3331C26.675 25.1571 26.6401 24.9828 26.5724 24.8203C26.5047 24.6578 26.4055 24.5104 26.2806 24.3864L17.8806 15.9998Z" fill="#2B1211"/>
+      </svg>
+    </figure>
+
+    <h2 class="title dialog-title">спасибо!</h2>
+    <p class="dialog-text">В ближайшее время с вами свяжемся!</p>
+  </article>
+
+  <article class="container" *ngIf="errorDialog">
+    <figure class="close-form" (click)="closeDialog()">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.8806 15.9998L26.2806 7.61309C26.5316 7.36202 26.6727 7.02149 26.6727 6.66643C26.6727 6.31136 26.5316 5.97083 26.2806 5.71976C26.0295 5.46869 25.689 5.32764 25.3339 5.32764C24.9788 5.32764 24.6383 5.46869 24.3872 5.71976L16.0006 14.1198L7.6139 5.71976C7.36283 5.46869 7.02231 5.32764 6.66724 5.32764C6.31217 5.32764 5.97164 5.46869 5.72057 5.71976C5.4695 5.97083 5.32845 6.31136 5.32845 6.66643C5.32845 7.02149 5.4695 7.36202 5.72057 7.61309L14.1206 15.9998L5.72057 24.3864C5.5956 24.5104 5.49641 24.6578 5.42871 24.8203C5.36102 24.9828 5.32617 25.1571 5.32617 25.3331C5.32617 25.5091 5.36102 25.6834 5.42871 25.8459C5.49641 26.0083 5.5956 26.1558 5.72057 26.2798C5.84452 26.4047 5.99199 26.5039 6.15447 26.5716C6.31695 26.6393 6.49122 26.6742 6.66724 26.6742C6.84325 26.6742 7.01753 26.6393 7.18001 26.5716C7.34248 26.5039 7.48995 26.4047 7.6139 26.2798L16.0006 17.8798L24.3872 26.2798C24.5112 26.4047 24.6587 26.5039 24.8211 26.5716C24.9836 26.6393 25.1579 26.6742 25.3339 26.6742C25.5099 26.6742 25.6842 26.6393 25.8467 26.5716C26.0092 26.5039 26.1566 26.4047 26.2806 26.2798C26.4055 26.1558 26.5047 26.0083 26.5724 25.8459C26.6401 25.6834 26.675 25.5091 26.675 25.3331C26.675 25.1571 26.6401 24.9828 26.5724 24.8203C26.5047 24.6578 26.4055 24.5104 26.2806 24.3864L17.8806 15.9998Z" fill="#2B1211"/>
+      </svg>
+    </figure>
+
+    <h2 class="title dialog-title">Извините!</h2>
+    <p class="dialog-text">Произошла ошибка, повторите попытку позже!</p>
+  </article>
+</dialog>
+
+<dialog id="dialog-thanks">
+</dialog>

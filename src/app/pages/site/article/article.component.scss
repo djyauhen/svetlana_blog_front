@@ -1,0 +1,105 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/fonts";
+@import "../../../../styles/mixins";
+
+.article {
+
+  .container {
+    padding: 165px 108px 65px;
+
+    .article-back-link {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      cursor: pointer;
+      margin-bottom: 30px;
+
+      @include p1-22;
+      color: $primary-dark-color;
+
+      svg, span {
+        margin: 0;
+      }
+    }
+
+    .article-block {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .article-text-block {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 105px;
+        max-width: 1265px;
+
+        .article-text-info {
+          padding: 16px 160px 7px 65px;
+          box-sizing: border-box;
+          border-left: 1px solid $secondary-dark-color;
+
+          .article-text-title {
+            @include h2-41;
+            color: $primary-dark-color;
+            max-width: 845px;
+            text-align: left;
+            margin: 0 0 40px;
+          }
+
+          .article-text-pretext {
+            max-height: 275px;
+            overflow-y: hidden;
+            text-overflow: ellipsis;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 23px;
+
+            @include p1-22;
+            color: $primary-medium-color;
+          }
+
+          .article-text-duration {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 0;
+
+            .duration-image, .duration-text {
+              margin: 0;
+            }
+
+            .duration-text {
+              margin: 0;
+              @include p1-22;
+              color: $primary-medium-color;
+            }
+          }
+        }
+
+        .article-text {
+          margin: 0;
+          @include p1-22;
+          color: $primary-medium-color;
+        }
+      }
+
+      .article-image-block {
+        width: 396px;
+        height: 476px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .article-image-item {
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+        }
+      }
+    }
+  }
+}

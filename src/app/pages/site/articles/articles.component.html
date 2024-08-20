@@ -1,0 +1,15 @@
+<section class="actual-articles" *ngIf="articles && (articles.length > 0)">
+  <article class="container">
+    <h2 class="title actual-articles-title">актуальные статьи</h2>
+    <section class="articles-items">
+      <article-card class="article-item" *ngFor="let article of articles" [article]="article"></article-card>
+    </section>
+    <a class="article-back-link" (click)="clickBack()">
+      <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.5 19.5L8.5 12.5L15.5 5.5" stroke="#20100F" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"/>
+      </svg>
+      <span>Вернуться назад</span>
+    </a>
+  </article>
+</section>
