@@ -81,6 +81,7 @@ export class AdminArticleComponent{
   }
 
   selectImage() {
+    this.fileInput = document.getElementById('file-input') as HTMLInputElement;
     this.fileInput ? this.fileInput.click() : null;
   }
 
@@ -173,7 +174,6 @@ export class AdminArticleComponent{
       this.dialogMenu.showModal();
     }
   }
-
 
   closeDialog() {
     if (this.dialogMenu) {

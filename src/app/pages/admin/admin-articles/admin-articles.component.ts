@@ -28,25 +28,27 @@ export class AdminArticlesComponent{
   }
 
   ngOnInit() {
-    this.activatedRoute.queryParams
-      .subscribe(params => {
+      this.activatedRoute.queryParams.subscribe(params => {
         this.page = params['page'] ? parseInt(params['page'], 10) : 1;
 
-        this.articlesAdminService.getAdminArticles(params)
-          .subscribe({
-            next: data => {
-              if (data) {
-                this.pages = [];
-                for (let i = 1; i <= data.pages; i++) {
-                  this.pages.push(i)
-                }
-                this.articles = data.articles
-              } else {
-                this.articles = null
+        this.articlesAdminService.getAdminArticles(params).subscribe({
+          next: data => {
+            if (data) {
+              this.pages = [];
+              for (let i = 1; i <= data.pages; i++) {
+                this.pages.push(i);
               }
+              this.articles = data.articles;
+            } else {
+              this.articles = null;
             }
-          })
-      })
+          },
+          error: error => {
+            console.log('Error:', error);
+            // Handle error if needed
+          }
+        });
+      });
   }
 
   deleteArticle() {
@@ -97,7 +99,6 @@ export class AdminArticlesComponent{
     this.router.navigate(['admin'], {
       queryParams: {page: this.page}
     });
-
   }
 }
 

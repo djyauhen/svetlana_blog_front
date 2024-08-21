@@ -19,7 +19,7 @@
 }
 
 .first-screen {
-  background: center bottom / auto no-repeat url("../../../../assets/images/main-image.webp");
+  background: center 99px / 100% no-repeat url("../../../../assets/images/main-image.webp");
 
   &:hover .container .service-items {
     opacity: 1;
@@ -27,7 +27,7 @@
 
   .container {
     max-width: 1920px;
-    padding: 239px 103px 118px;
+    padding: 169px 103px 118px;
 
     .main-title {
       @include h1-60;

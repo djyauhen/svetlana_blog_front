@@ -27,7 +27,15 @@ export class ArticlesComponent implements OnInit{
     this.articleService.getAdminArticles({page: 1})
       .subscribe({
         next: data => {
-          if (data && (data.articles.length > 0)) this.articles = data.articles;
+          if (data && (data.articles.length > 0)) {
+            this.articles = data.articles;
+            this.articleService.updateShowBlogLinks(true);
+          } else {
+            this.articleService.updateShowBlogLinks(false);
+          }
+        },
+        error: err => {
+          console.log(err);
         }
       })
   }

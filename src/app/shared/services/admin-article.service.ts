@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {BehaviorSubject, Observable} from "rxjs";
 import {ArticleType} from "../../../types/article.type";
 import {Params} from "@angular/router";
 import {config} from "../../../config/config";
@@ -9,7 +9,14 @@ import {config} from "../../../config/config";
   providedIn: 'root'
 })
 export class AdminArticleService {
+  private showBlogLinksSubject = new BehaviorSubject<boolean>(false);
+  showBlogLinks$ = this.showBlogLinksSubject.asObservable();
   constructor(public http: HttpClient) { }
+
+
+  updateShowBlogLinks(value: boolean) {
+    this.showBlogLinksSubject.next(value);
+  }
 
   getAdminArticles(params: Params): Observable<{totalCount: any, pages: any, articles: ArticleType[]} | null>{
     return this.http.get<{totalCount: any, pages: any, articles: ArticleType[]} | null>(`${config.API}/api/articles`, {

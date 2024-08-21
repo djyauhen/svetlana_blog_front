@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {HeaderComponent} from "./header/header.component";
 import {FooterComponent} from "./footer/footer.component";
 import {RouterOutlet} from "@angular/router";
+import {AdminArticleService} from "../services/admin-article.service";
 
 @Component({
   selector: 'app-layout',

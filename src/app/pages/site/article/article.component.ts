@@ -35,6 +35,9 @@ export class ArticleComponent {
                   this.article = data;
                   this.getDurationText(this.article.duration);
                 }
+              },
+              error: err => {
+                console.log(err);
               }
             });
         }

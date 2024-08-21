@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {RouterLink} from "@angular/router";
 import {AdminArticleService} from "../../services/admin-article.service";
 import {NgIf} from "@angular/common";
@@ -14,19 +14,15 @@ import {NgIf} from "@angular/common";
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  hiddenBlogLink = true;
-
+  showBlogLinks: boolean = false;
   dialogMenu: HTMLDialogElement | null = null;
 
-  constructor(private articleService: AdminArticleService) {
-  }
+  constructor(private articleService: AdminArticleService) {}
+
   ngOnInit() {
-    this.articleService.getAdminArticles({page: 1})
-      .subscribe({
-        next: data => {
-          if (data && (data.articles.length > 0)) this.hiddenBlogLink = false;
-        }
-      })
+    this.articleService.showBlogLinks$.subscribe(value => {
+      this.showBlogLinks = value;
+    });
   }
 
   openDialog(dialogID: string) {

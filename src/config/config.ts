@@ -1,4 +1,4 @@
 export const config = {
-  // API: 'http://localhost:8080',
-  API: 'http://77.222.38.178:80'
+  API: 'http://192.168.1.6:443',
+  // API: 'http://77.222.38.178:8080'
 }

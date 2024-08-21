@@ -154,7 +154,15 @@ export class MainComponent {
     this.articleService.getAdminArticles({page: 1})
       .subscribe({
         next: data => {
-          if (data && (data.articles.length > 0)) this.articles = data.articles;
+          if (data && (data.articles.length > 0)) {
+            this.articles = data.articles;
+            this.articleService.updateShowBlogLinks(true);
+          } else {
+            this.articleService.updateShowBlogLinks(false);
+          }
+        },
+        error: err => {
+          console.log(err);
         }
       })
   }
@@ -202,7 +210,7 @@ export class MainComponent {
             }
           },
           error: err => {
-            this.errorDialog = false;
+            this.errorDialog = true;
             this.openDialog('dialog-form');
             this.clearForm();
             console.log(err);
